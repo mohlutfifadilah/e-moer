@@ -57,15 +57,15 @@
                 </div>
                 <!-- Card Body -->
                 <div class="card-body">
-                    <form action="{{ route('login') }}" method="POST">
+                    <form action="{{ url('proses_login') }}" method="POST">
                         @csrf
                         <div class="form-group row">
-                            <label for="email" class="col-sm-4 col-form-label">NIS</label>
+                            <label for="ni" class="col-sm-4 col-form-label">NIS</label>
                             <div class="col-sm-8">
-                                <input class="form-control @error('email') is-invalid @enderror" type="text"
-                                    placeholder="" id="email" name="email" value="{{ old('email') }}"
+                                <input class="form-control @error('ni') is-invalid @enderror" type="text"
+                                    placeholder="" id="ni" name="ni" value="{{ old('ni') }}"
                                     autocomplete="off">
-                                @error('email')
+                                @error('ni')
                                     <small class="text-danger">
                                         NIS tidak boleh kosong
                                     </small>
